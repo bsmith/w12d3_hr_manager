@@ -1,7 +1,7 @@
 package management;
 
 public class Director extends Manager {
-    private double budget;
+    private final double budget;
 
     public Director(String name, String niNumber, double salary, String deptName, double budget) {
         super(name, niNumber, salary, deptName);
@@ -12,6 +12,7 @@ public class Director extends Manager {
         return budget;
     }
 
+    @Override
     public double payBonus() {
         return 0.02 * this.getSalary();
     }
