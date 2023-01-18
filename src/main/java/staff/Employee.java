@@ -37,4 +37,10 @@ public abstract class Employee {
     public double payBonus() {
         return 0.01 * this.salary;
     }
+
+    public void setName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
 }
