@@ -39,6 +39,13 @@ public class ManagerTest {
     }
 
     @Test
+    public void cannotRaiseSalaryWithNegativeIncrement() {
+        assertEquals("wrong increment",
+                manager.raiseSalary(-500));
+        assertEquals(50000, manager.getSalary(), 0.0);
+    }
+
+    @Test
     public void payBonus() {
         double bonus = manager.payBonus();
         assertEquals(500, bonus, 0.0);

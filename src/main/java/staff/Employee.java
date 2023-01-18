@@ -23,8 +23,15 @@ public abstract class Employee {
         return salary;
     }
 
-    public void raiseSalary(double increment) {
-        this.salary += increment;
+    public String raiseSalary(double increment) {
+        if (increment > 0) {
+            this.salary += increment;
+//            return ((Double)this.salary).toString();
+            return String.format("%.2f", this.salary);
+        }
+        else {
+            return "wrong increment";
+        }
     }
 
     public double payBonus() {
