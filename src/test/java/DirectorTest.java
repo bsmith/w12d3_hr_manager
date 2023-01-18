@@ -48,5 +48,4 @@ public class DirectorTest {
         double bonus = director.payBonus();
         assertEquals(2000, bonus, 0.0);
     }
-
 }
